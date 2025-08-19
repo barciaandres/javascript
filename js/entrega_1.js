@@ -6,7 +6,7 @@ function calcularPromedioNotas() {
     //Ingreso de datos
     while (true) {
         entrada = prompt("Ingresa una nota (o ninguna para terminar):");
-        if (entrada === null || entrada.toLowerCase() === 'salir' || entrada.length == 0) {
+        if (entrada === null || entrada.length == 0) {
             break;
         }
         const nota = parseFloat(entrada);
@@ -23,11 +23,8 @@ function calcularPromedioNotas() {
         for (let i = 0; i < notas.length; i++) {
             sumaTotal += notas[i];
         }
-
         let promedio = sumaTotal / notas.length;
-
         console.log("--------------------");
-        console.log("Cálculo finalizado.");
         console.log(`Se ingresaron ${notas.length} notas.`);
         console.log(`Las notas fueron: [${notas.join(', ')}]`);
         console.log(`El promedio final es: ${promedio.toFixed(2)}`);
